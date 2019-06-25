@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="list-group">
+                <app-post-list-item 
+                    *ngFor="let post of postsList; let idx = index" 
+                    [id]="post.id" 
+                    [title]="post.title" 
+                    [content]="post.content" 
+                    [loveIts]="post.loveIts" 
+                    [created_at]="post.created_at"></app-post-list-item>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!--
+    <li [ngClass]="{'list-group-item': true, 
+            'list-group-item-success': appareilStatus === 'allumé', 
+            'list-group-item-danger': appareilStatus === 'éteint'}"></li> 
+-->
